@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: linear-gradient(#43A047, #394AA8);
+    --light     : #fff;
+    --dark-blue : #3F51B5;
+    --red       : #f44336;
+    --purple    : #9c27b0;
+    --light-blue: #2196f3;
+    --teal      : #009688;
+    --cyan      : #00bcd4;
+    --orange    : #ff9800;
+    --green     : #4caf50;
+    --yellow    : #ffeb3b;
+    --font      : 'Bungee',
+        cursive;
+}
+/* Typography */
+.text-red {
+    color: var(--red)
+}
+
+.text-purple {
+    color: var(--purple)
+}
+
+.text-blue {
+    color: var(--light-blue)
+}
+
+.text-teal {
+    color: var(--teal)
+}
+
+.text-cyan {
+    color: var(--cyan)
+}
+
+.text-orange {
+    color: var(--orange)
+}
+
+.text-yellow {
+    color: var(--yellow)
+}
+
+html {
+    font-size : 62.5%;
+    min-height: 100%;
+}
+
+body {
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background             : var(--background);
+
+}
+
+/* Header */
+.header__section h1 {
+    text-align: center;
+    font-size : 5rem;
+    color     : var(--light)
+}
+
+/* Main Section */
+.main__section .middle {
+    min-height: 500px;
+    background: var(--dark-blue);
+    border    : 1px solid var(--light);
+}
+.main__section .middle__wrapper {
+    height    : 100%;
+    background: url("../../public/images/bgsp.jpg");
+}
+
+.card__footer input {
+    height: 50px;
+}
+
+.card__footer button {
+    width: 15rem;
+}
+
+/* Name */
+.main__section .name {
+    font-size  : 4rem;
+    text-align : center;
+    font-family: var(--font);
+    color      : var(--light);
+    text-shadow: 2px 2px 7px red;
+}
+
+/* wishing */
+.main__section .wishing {
+    font-size  : 3rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align : center;
+}
+
+.main__section .subtitle {
+    color      : var(--light);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size  : 2rem;
+    text-align : center;
+    text-shadow: 2px 5px 7px #804949;
+}
+
+.main__section .images {
+    text-align: center;
+}
+
+.main__section .fetures__image {
+    width    : 30.1rem;
+    max-width: 100%;
+    animation: fetures__image 3s ease-in-out infinite;
+}
+
+@keyframes fetures__image {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.main__section .images__bottom {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    flex-wrap      : wrap;
+}
+
+.main__section .images__bottom img {
+    width: 120px;
+}
+
+.main__section .wishes__text {
+    text-align: center;
+    color     : var(--light);
+    font-size : 1.5rem;
+}
+
+/* Particles */
+#particles-js {
+    position: absolute;
+    width   : 100%;
+    height  : 100vh;
+    top     : 0;
+    left    : 0;
+    right   : 0;
+    bottom  : 0;
+}
+
+@media screen and (max-width:400px) {
+    .card__footer button {
+        width: 10rem;
+    }
+}
+
+.name__wrapper {
+    transform-origin: center center;
+    transform-style : preserve-3d;
+    animation       : moveName 9s linear infinite;
+    position        : relative;
+    height          : 60px;
+}
+
+@keyframes moveName {
+
+    0%,
+    100% {
+        transform: rotate3d(1, 1, 0, 30deg);
+    }
+
+    25% {
+        transform: rotate3d(-1, 1, 0, 30deg);
+    }
+
+    50% {
+        transform: rotate3d(-1, -1, 0, 30deg);
+    }
+
+    70% {
+        transform: rotate3d(1, -1, 0, 30deg);
+    }
+}
+
+.name__wrapper h2 {
+    display    : block;
+    width      : 100%;
+    padding    : 10px;
+    line-height: 1;
+    position   : absolute;
+    animation  : nameGlow 9s linear infinite;
+}
+
+@keyframes nameGlow {
+
+    0% {
+        text-shadow: 2px 2px 5px var(--red);
+    }
+
+    100% {
+        text-shadow: 2px 2px 5px var(--red);
+    }
+
+    25% {
+        text-shadow: 2px 2px 5px var(--cyan);
+    }
+
+    50% {
+        text-shadow: 2px 2px 5px var(--dark-blue);
+    }
+
+    75% {
+        text-shadow: 2px 2px 5px var(--yellow);
+    }
+
+    100% {
+        text-shadow: 2px 2px 5px var(--purple);
+    }
+}
